@@ -125,7 +125,7 @@ def start_date(start_date):
         # Return JSON List of Min Temp, Avg Temp and Max Temp for a Given Start Range
         return jsonify(start_day_list)
     
-    return jsonify({"error": f"Input date {start_date} is not valid."}), 404
+    return jsonify({"Error": f"Input date {start_date} is not valid."}), 404
 
 # Start / End Date Route
 @app.route("/api/v1.0/<start_date>/<end_date>")
@@ -155,9 +155,9 @@ def start_end_date(start_date,end_date):
             # Return JSON List of Min Temp, Avg Temp and Max Temp for a Given Start Range
             return jsonify(date_list)
 
-        return jsonify({"error": f"Input date {end_date} is not valid."}), 404
+        return jsonify({"Error": f"Input date {end_date} is not valid."}), 404
 
-    return jsonify({"error": f"Input date {start_date} is not valid."}), 404
+    return jsonify({"Error": f"Input date {start_date} is not valid."}), 404
 
 if __name__ == "__main__":
     app.run(debug=True)
